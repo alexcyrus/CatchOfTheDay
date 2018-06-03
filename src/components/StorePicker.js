@@ -4,13 +4,13 @@ import { getFunName } from '../helpers';
 class StorePicker extends React.Component {
 	myInput = React.createRef();
 
-	goToStore = (event) => {
+	goToStore = event => {
 		// stops the form from submitting
 		event.preventDefault();
 		// gets the text from that input
-		console.log(this);
+		console.log(this.myInput);
 		// changes the page to /store/whatever-they-entered
-	}
+	};
 	render() {
 		return (
 			<form className="store-selector" onSubmit={this.goToStore}>
@@ -19,7 +19,7 @@ class StorePicker extends React.Component {
 				<button type="submit">Visit Store -></button>
 			</form>
 		)
-	}
-}
+	};
+};
 
 export default StorePicker;
