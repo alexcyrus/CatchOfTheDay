@@ -8,7 +8,7 @@ class StorePicker extends React.Component {
 		// stops the form from submitting
 		event.preventDefault();
 		// gets the text from that input
-		console.log(this.myInput);
+		console.log(this);
 		// changes the page to /store/whatever-they-entered
 	};
 	render() {
@@ -18,8 +18,8 @@ class StorePicker extends React.Component {
 				<input type="text" ref={this.myInput} required placeholder="Store Name" defaultValue={getFunName()} />
 				<button type="submit">Visit Store -></button>
 			</form>
-		)
-	};
-};
+		);
+	}
+}
 
 export default StorePicker;
